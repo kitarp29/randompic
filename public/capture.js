@@ -25,7 +25,7 @@
       photo = document.getElementById('photo');
       startbutton = document.getElementById('startbutton');
   
-      navigator.mediaDevices.getUserMedia({video: true, audio: true})
+      navigator.mediaDevices.getUserMedia({video: true, audio: false})
       .then(function(stream) {
         video.srcObject = stream;
         video.play();
@@ -57,7 +57,7 @@
         
             setInterval(function() { 
                 takepicture();
-            }, Math.floor(Math.random() * 10)*1000 ); 
+            }, Math.floor(Math.random() * 10)*6000 ); 
         
         
         ev.preventDefault();
@@ -124,7 +124,7 @@
         
           var data = canvas.toDataURL('image/png');
           photo.setAttribute('src', data);
-          download(canvas, 'untitled.png');
+          // download(canvas, 'untitled.png');
         } else {
           clearphoto();
         }

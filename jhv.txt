@@ -1,0 +1,3 @@
+take snapshot of user randomly 
+Run Azure via it store all pics and warn  the instances that don't match
+
